@@ -17,7 +17,7 @@ public class FirstActivity extends AppCompatActivity {
         long factorial = calculateFactorial(n);
         this.setTitle(n + "の階乗");
 
-        TextView firstText = (TextView)findViewById(R.id.firstText);
+        TextView firstText = (TextView) findViewById(R.id.firstText);
         firstText.setText(String.valueOf(factorial));
         firstText.setTextSize(20.0f);
 
@@ -29,6 +29,7 @@ public class FirstActivity extends AppCompatActivity {
 
     /**
      * 階乗計算
+     *
      * @param n
      * @return
      */
@@ -40,7 +41,7 @@ public class FirstActivity extends AppCompatActivity {
         return product;
     }
 
-    private void doCat(){
+    private void doCat() {
         Cat tama = new Cat("タマ", 3, "オス", "三毛猫");
         Cat kuro = new Cat("クロ", 1, "メス", "黒猫");
         tama.greet();

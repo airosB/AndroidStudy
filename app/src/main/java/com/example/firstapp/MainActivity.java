@@ -2,10 +2,13 @@ package com.example.firstapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
+    public final static String EXTRA_MESSAGE = "com.example.firstapp.MESSAGE";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +20,17 @@ public class MainActivity extends AppCompatActivity {
      * called when the user clicks the Send button
      */
     public void sendMessage(View view) {
-        // Do something in response to button
+        EditText editText = (EditText) findViewById(R.id.edit_message);
+        String message = editText.getText().toString();
+
+        Intent intent;
+        if (message.startsWith("error")) {
+            intent = new Intent(this, DisplayErrorActivity.class);
+        } else {
+            intent = new Intent(this, DisplayMessageActivity.class);
+        }
+
+        intent.putExtra(EXTRA_MESSAGE, message);
+        startActivity(intent);
     }
 }
