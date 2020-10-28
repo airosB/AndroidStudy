@@ -1,10 +1,9 @@
 package com.example.firstapp;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 
 import android.os.Bundle;
-import android.widget.TextView;
+import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,4 +13,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    /**
+     * called when the user clicks the Send button
+     */
+    public void sendMessage(View view) {
+        // Do something in response to button
+    }
 }
