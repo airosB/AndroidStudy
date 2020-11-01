@@ -7,32 +7,25 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Type here:"/>
-
     <EditText
         android:id="@+id/entry"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/label"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="41dp" />
-
+        android:layout_below="@id/label"/>
     <Button
         android:id="@+id/ok"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/entry"
-        android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="76dp"
-        android:layout_marginEnd="126dp"
-        android:layout_marginRight="126dp"
+        android:textSize="20sp"
         android:text="OK" />
-
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_toLeftOf="@id/ok"
         android:layout_alignTop="@id/ok"
+        android:textSize="20sp"
         android:text="Cancel" />
 </RelativeLayout>
